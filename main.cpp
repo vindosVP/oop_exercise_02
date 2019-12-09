@@ -6,7 +6,7 @@ int main() {
     Modulo a;
     Modulo b;
     Modulo c;
-
+    
     a.Read(std::cin);
     b.Read(std::cin);
 
@@ -41,6 +41,6 @@ int main() {
         c.Print(std::cout);        
     }
 
-
-    return 0;
+ 
+ return 0;
 }

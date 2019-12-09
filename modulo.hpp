@@ -3,7 +3,7 @@
 
 
 #include <iostream>
-
+#include <sstream>
 
 class Modulo {
     public:
@@ -15,8 +15,8 @@ class Modulo {
         Modulo operator/(const Modulo& divisor) const;
         void Read(std::istream& is);
         void Print(std::ostream& os) const;
-        void SetNumber(int number);
-        void SetMod(int mod);
+        void SetNumber(int number,int h);
+        void SetMod(int mod, int f);
         int GetNumber() const;
         int GetMod() const;
         bool operator==(const Modulo& to_compare);
@@ -25,6 +25,9 @@ class Modulo {
     private:
         int number;
         int mod;
-};
+        int h;
+        int f;
 
+};
+            Modulo operator""_mod(const char* str, size_t size);
 #endif
