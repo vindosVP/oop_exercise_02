@@ -6,6 +6,7 @@ int main() {
     Modulo a;
     Modulo b;
     Modulo c;
+    Modulo v;
 
     std::cin >> a;
     std::cin >> b;
@@ -40,7 +41,8 @@ int main() {
         std::cout << c;
 ;        
     }
-
+    v="2,4"_mod;
+    std::cout << v;
  
  return 0;
 }
