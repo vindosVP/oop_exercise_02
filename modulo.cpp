@@ -16,14 +16,6 @@ int ExtendedEuclid(int a, int b, int& x, int& y) {
     return gcd;
 }
 
-/*Modulo Modulo::Add(const Modulo& addend) const {
-    assert(mod == addend.mod);
-    Modulo result;
-    result.number = (number + addend.number)%mod;
-    result.mod = mod;
-    return result;
-}*/
-
 Modulo Modulo::operator+(const Modulo& addend) const {
     assert(mod == addend.mod);
     Modulo result;
