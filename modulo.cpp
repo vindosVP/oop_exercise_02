@@ -69,12 +69,12 @@ void Modulo::Print(std::ostream& os) const {
     os << number << " mod " << mod << std::endl;
 }
 
-void Modulo::SetNumber(int number, int h) {
-    this->h = number;
+void Modulo::SetNumber(int number) {
+    this->number = number;
 }
 
-void Modulo::SetMod(int mod, int f) {
-    this->f = mod;        
+void Modulo::SetMod(int mod) {
+    this->mod = mod;        
 }
 
 int Modulo::GetNumber() const {
@@ -96,6 +96,18 @@ bool Modulo::operator>(const Modulo& to_compare){
 bool Modulo::operator<(const Modulo& to_compare){
     return(this->number < to_compare.number);
 }
+
+std::istream& operator>>(std::istream& is, Modulo& k){
+    k.Read(is);
+    return(is);
+}
+
+std::ostream& operator<<(std::ostream& os, const Modulo& k){
+    k.Print(os);
+    return(os);
+}
+
+
 Modulo operator""_mod(const char* str, size_t size) {//"2,3"_mod
         std::istringstream is(str);
         char tmp;

@@ -6,21 +6,20 @@ int main() {
     Modulo a;
     Modulo b;
     Modulo c;
-    
-    a.Read(std::cin);
-    b.Read(std::cin);
+
+    std::cin >> a;
+    std::cin >> b;
 
     std::cout << "Addition:" << std::endl;
-    c = a+b;
-    c.Print(std::cout);
+    std::cout << a+b;
 
     std::cout << "Subtraction:" << std::endl;
-    c = a-b;
-    c.Print(std::cout);
+    std::cout << a-b;
+
 
     std::cout << "Multiplication:" << std::endl;
-    c = a*b;
-    c.Print(std::cout);
+    std::cout << a*b;
+
 
     if(a==b) {
         std::cout << "Numbers are equal" << std::endl;
@@ -38,7 +37,8 @@ int main() {
     std::cout << "Division:" << std::endl;
     c = a/b;
     if(c.GetMod()) {
-        c.Print(std::cout);        
+        std::cout << c;
+;        
     }
 
  

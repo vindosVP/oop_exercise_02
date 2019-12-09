@@ -15,13 +15,15 @@ class Modulo {
         Modulo operator/(const Modulo& divisor) const;
         void Read(std::istream& is);
         void Print(std::ostream& os) const;
-        void SetNumber(int number,int h);
-        void SetMod(int mod, int f);
+        void SetNumber(int number);
+        void SetMod(int mod);
         int GetNumber() const;
         int GetMod() const;
         bool operator==(const Modulo& to_compare);
         bool operator>(const Modulo& to_compare);
         bool operator<(const Modulo& to_compare);
+        friend std::istream& operator>>(std::istream& is, Modulo& k);
+        friend std::ostream& operator<<(std::ostream& os, const Modulo& k);
     private:
         int number;
         int mod;
